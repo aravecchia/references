@@ -1,0 +1,3 @@
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Tabela Completa de G/M-codes do Marlin 2.x}{3}{section.1}%

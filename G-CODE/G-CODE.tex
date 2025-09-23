@@ -1,0 +1,212 @@
+%        ,
+%    ,   |\ ,__
+%    |\   \/   `.
+%    \ `-.:.     `\
+%     `-.__ `\=====|
+%        /=`'/   ^_\
+%      .'   /\   .=)
+%   .-'  .'|  '-(/_|
+% .'  __(  \  .'`
+%/_.'`  `.  |`
+%    jgs  \ |
+%          |/
+% PREAMBULO VIKING
+
+\documentclass[10pt]{article}
+
+%%%%% Configuracao da pagina %%%%%
+\usepackage[portrait, top=5mm, left=10mm, right=10mm, bottom=0mm, paperwidth=210mm, paperheight=297mm]{geometry}
+%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage[most]{tcolorbox}  
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+
+%%%%% Cabecalho e rodape %%%%%
+\usepackage{fancyhdr} % Pacote para personalizar cabecalho e rodape
+\pagestyle{fancy}
+
+
+% Define cor da linha do cabeçalho
+\renewcommand{\headrule}{\color{black}\hrule height 1pt \vspace{-.2\baselineskip}}
+% Define cor da linha do rodapé
+\renewcommand{\footrule}{\color{black}\hrule height 1pt \vspace{-.1\baselineskip}}
+
+\newcommand{\linksumario}{\hyperlink{sumario}{\includegraphics[height=4mm]{./IMG/tux.png}}}
+
+\fancyhead[C]{\linksumario}
+\fancyhead[L]{\color{black}G/M-CODE}
+\fancyfoot[C]{\large\color{black}\vspace*{-4mm}\LaTeX}
+\fancyhead[R]{\color{black}Aravecchia 3D}
+
+\fancyfoot[R]{\color{black}\vspace*{-4mm}\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%%%%% Configuracoes adicionais de layout %%%%%
+\setlength{\headsep}{5mm} % Distancia do cabecalho ao texto
+\setlength{\headheight}{7.5mm} % Altura do cabecalho
+\setlength{\footskip}{-5mm} % Distancia do rodape ao texto
+\setlength{\textheight}{275mm} % Altura do texto
+\setlength{\topmargin}{-27mm} % Margem superior
+\setlength{\columnsep}{10mm} % Distancia entre colunas em multicolunas
+\setlength{\parskip}{1mm plus 5mm} % Define o espacamento entre paragrafos
+\linespread{1.25} % Define a distancia entre as linha s como 1.25 vezes o padrao
+
+%%%%% Pacotes de idioma %%%%%
+\usepackage[brazil]{babel} % Suporte ao portugues do Brasil
+\usepackage[utf8]{inputenc} % Codificacao do arquivo fonte
+
+%%%%% Bibliografia %%%%%
+\usepackage[num]{abntex2cite} % Citacoes conforme norma ABNT
+\usepackage{babelbib} % Traducao de termos bibliograficos
+
+%%%%% Fonte sans-serif %%%%%
+
+%\usepackage{fontspec} %para usar com XeLatex
+\usepackage[default,scale=0.9]{opensans} % Fonte sans-serif
+
+%\setmainfont{opensans} % Escolha uma fonte que suporte caracteres cirílicos
+
+%%%%% Cores e hyperlinks %%%%%
+\usepackage{multicol} % Layout de multiplas colunas
+\usepackage[svgnames]{xcolor} % Cores
+\usepackage{graphicx} % Inclusao de graficos
+\usepackage{tikz}  % Inclusao de graficos
+\usepackage{adjustbox}
+\usetikzlibrary{shapes,arrows.meta,calc,positioning}
+%\usepackage{titling} % Inclusao de graficos na capa
+\usepackage{hyperref} % Links
+\usepackage{calc} % para calcular largura dinâmica
+
+\definecolor{linkblue}{rgb}{0,0,0.7}
+
+\definecolor{darkgreen}{rgb}{0, 0.7, 0}
+\definecolor{darkblue}{rgb}{0, 0, 0.7}
+\definecolor{darkgray}{rgb}{0.2, 0.2, 0.2}
+
+\definecolor{lightgray}{rgb}{0.8, 0.8, 0.8}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=linkblue,
+	filecolor=linkblue,
+	urlcolor=linkblue,
+	citecolor=linkblue,
+	pdfborder={0 0 0},
+	pdftitle={Sistema de Automação Agroindustrial}
+}
+
+%%%%% Pacotes para manipulacao de arquivos e midia %%%%%
+\usepackage{csvsimple} % Manipulacao de arquivos CSV
+\usepackage{expl3} % Programacao LaTeX3
+\usepackage{pgffor} % Lacos de repeticao
+
+\usepackage{wasysym} % Simbolos
+\usepackage{wallpaper} % Imagem de fundo
+\usepackage{media9} % Inclusao de midia
+\usepackage{listings} % Inclusao de codigo fonte
+\usepackage{soul} % Destaque de texto
+\usepackage{amssymb} % Simbolos matematicos
+\usepackage{fontawesome} % Fontes e icones
+\usepackage{float} % Para uso de minipages
+\usepackage{pdfpages} % Inclusao de paginas PDF
+\usepackage{pgffor}      % para o loop
+\usepackage{xfp}         % permite fazer contas com \fpeval
+\usepackage{lipsum} % Texto de 7preenchimento
+\usepackage{enumitem}
+\usepackage{svgcolor} % Cores extras
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{supertabular} %para tabularx funcionar em multicols
+\usepackage{longtable} % Para tabelas que ocupam mais espaço
+\usepackage{array} % Manipulacao de arrays
+
+
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+
+%\usepackage{booktabs}
+%%%%% Configuracao de listas %%%%%
+%\renewcommand{\labelitemi}{$\bullet$}
+%\renewcommand{\labelitemi}{$\bullet$}
+%\renewcommand{\labelitemii}{$\checked$}
+%\renewcommand{\labelitemiii}{$\diamond$}
+%\renewcommand{\labelitemiv}{$\ast$}
+
+\renewcommand{\labelitemi}{\faChevronCircleRight}
+\renewcommand{\labelitemii}{\faArrowRight}
+\renewcommand{\labelitemiii}{$\diamond$}
+\renewcommand{\labelitemiv}{$\ast$}
+
+%\faPowerOff
+
+%CHAMADA DE CONFIGURACOES PARA CODIGO-FONTE EM ARDUINO
+
+\input{./TeX/CODE/ARDUINO-CODE.tex}
+%CHAMADA DE CONFIGURACOES PARA CODIGO-FONTE EM PYTHON
+\input{./TeX/CODE/PYTHON-CODE.tex}
+%SHELL
+\input{./TeX/CODE/SHELL-CODE.tex}
+%\LaTeX
+\input{./TeX/CODE/LATEX-CODE.tex}
+
+%%%%% Titulo e autor %%%%%
+\date{\small\textcolor{white}\today}
+%\date{\today}
+\title{
+	\huge{
+		\vspace*{-15mm}
+		\resizebox{120mm}{16mm}{\color{black}{{\textbf{G/M-CODES}}}}
+		}
+}
+
+
+
+%\ThisCenterWallPaper{1}{./IMG-GIT/IA/efestus-2a.png}
+
+
+
+\begin{document}
+	\color{black}
+	\pagecolor{white}
+	\maketitle	
+		
+	\vspace{-25mm}
+
+	\begin{center}
+		\resizebox{120mm}{5mm}{\color{black}{{Tabela Completa do Marlin 2.x}}}
+		
+		\vspace{10mm}
+		
+%		\resizebox{40mm}{3mm}{\color{black}{{Notas do Desenvolvedor}}}
+%
+			\vspace{5mm}
+
+		\includegraphics[width=30mm]{./IMG/Aravecchia3D.png}
+		
+		\date{\small\textcolor{black}\today}
+\end{center}
+	
+%	\includegraphics[width=50mm]{./IMG/SABRE.png}
+
+	
+\vfil\null	\pagebreak
+	
+
+		\normalsize
+%		\tableofcontents
+%
+%	\vfill
+%	\pagebreak
+	
+%	{\normalsize Fonte: \href{URL_DA_FONTE}{Nome da Fonte}}
+	
+	\input{./CAPITULOS.tex}
+	
+%	\bibliography{suas-referencias.bib}
+\end{document}

@@ -1,0 +1,149 @@
+
+\newlength{\funcwidth}
+\setlength{\funcwidth}{.65\linewidth} % largura restante para a coluna "Função"
+
+\begin{longtable}{|l|l|p{\funcwidth}|}
+	\hline
+	\textbf{Comando} & \textbf{Categoria} & \textbf{Função} \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{Comando} & \textbf{Categoria} & \textbf{Função} \\
+	\hline
+	\endhead
+	\hline % esta linha será repetida no final de cada página automaticamente
+	\endfoot
+	\hline % esta linha aparecerá apenas no final da tabela
+	\endlastfoot
+	
+	% ===================== G-CODES =====================
+			
+			% ===================== G-CODES =====================
+			G0 / G1 & Movimento & Movimento linear com ou sem extrusão. \\
+			G2 / G3 & Movimento & Movimento em arco (horário / anti-horário). \\
+			G4 & Movimento & Pausa por tempo (P=ms ou S=segundos). \\
+			G5 & Movimento & Movimento em curva Bézier cúbica. \\
+			G6 & Movimento & Movimento direto em cinemática CoreXY/SCARA. \\
+			G10 & Extrusor & Retração do filamento. \\
+			G11 & Extrusor & Retorno da retração. \\
+			G12 & Manutenção & Ciclo de limpeza do bico. \\
+			G20 & Unidade & Define polegadas como unidade. \\
+			G21 & Unidade & Define milímetros como unidade. \\
+			G26 & Teste & Imprime padrão de teste para nivelamento da cama. \\
+			G27 & Movimento & Retorna à posição de parqueamento após nivelamento. \\
+			G28 & Movimento & Home em todos os eixos. \\
+			G29 & Nivelamento & Auto bed leveling (diversos modos). \\
+			G30 & Nivelamento & Probe em ponto único. \\
+			G31 & Nivelamento & Define offset da sonda Z. \\
+			G32 & Nivelamento & Auto-calibração (varia por firmware). \\
+			G33 & Nivelamento & Auto-calibração delta. \\
+			G34 & Nivelamento & Auto-align de múltiplos Z. \\
+			G35 & Nivelamento & Calibração automática de cama inclinada. \\
+			G38.x & Probe & Comandos de probing com parada ao toque. \\
+			G42 & Movimento & Move diretamente para coordenadas de malha. \\
+			G53 & Movimento & Movimento em coordenadas máquina. \\
+			G54--G59 & Movimento & Sistemas de coordenadas de trabalho. \\
+			G90 & Movimento & Define coordenadas absolutas. \\
+			G91 & Movimento & Define coordenadas relativas. \\
+			G92 & Movimento & Redefine posição atual. \\
+			\hline
+			
+			% ===================== M-CODES =====================
+			M0 / M1 & Controle & Pausa até interação do usuário. \\
+			M3 / M4 & Spindle/Laser & Liga spindle/laser (CW/CCW). \\
+			M5 & Spindle/Laser & Desliga spindle/laser. \\
+			M17 & Controle & Liga motores. \\
+			M18 / M84 & Controle & Desliga motores. \\
+			M20 & SD & Lista arquivos no SD. \\
+			M21 & SD & Monta cartão SD. \\
+			M22 & SD & Desmonta cartão SD. \\
+			M23 & SD & Seleciona arquivo no SD. \\
+			M24 & SD & Inicia ou retoma impressão do SD. \\
+			M25 & SD & Pausa impressão do SD. \\
+			M26 & SD & Define posição no arquivo SD. \\
+			M27 & SD & Status do SD printing. \\
+			M28 & SD & Inicia gravação no SD. \\
+			M29 & SD & Encerra gravação no SD. \\
+			M30 & SD & Apaga arquivo do SD. \\
+			M32 & SD & Executa arquivo do SD. \\
+			M33 & SD & Mostra conteúdo de arquivo. \\
+			M34 & SD & Seleciona arquivo por índice. \\
+			M42 & GPIO & Controla nível lógico de pino. \\
+			M43 & GPIO & Testa pinos. \\
+			M48 & Probe & Testa repetibilidade da sonda. \\
+			M73 & Display & Mostra progresso da impressão (\%). \\
+			M75 & Controle & Inicia cronômetro de impressão. \\
+			M76 & Controle & Pausa cronômetro. \\
+			M77 & Controle & Para cronômetro. \\
+			M78 & Relatório & Estatísticas de impressão. \\
+			M80 & Energia & Liga fonte de energia. \\
+			M81 & Energia & Desliga fonte de energia. \\
+			M82 & Extrusor & Define extrusão absoluta. \\
+			M83 & Extrusor & Define extrusão relativa. \\
+			M85 & Segurança & Define tempo limite de inatividade. \\
+			M92 & Configuração & Define passos/mm dos eixos. \\
+			M104 & Temperatura & Define temperatura do bico (não espera). \\
+			M109 & Temperatura & Define temperatura do bico (aguarda). \\
+			M140 & Temperatura & Define temperatura da mesa (não espera). \\
+			M190 & Temperatura & Define temperatura da mesa (aguarda). \\
+			M106 & Ventilador & Liga/ajusta ventilador (S=0-255). \\
+			M107 & Ventilador & Desliga ventilador. \\
+			M114 & Relatório & Reporta posição atual. \\
+			M115 & Relatório & Versão do firmware. \\
+			M117 & Display & Mostra mensagem no LCD. \\
+			M119 & Relatório & Status dos endstops. \\
+			M125 & Controle & Pausa de parqueamento. \\
+			M200 & Filamento & Define diâmetro do filamento. \\
+			M201 & Movimento & Define aceleração máxima. \\
+			M203 & Movimento & Define velocidade máxima. \\
+			M204 & Movimento & Define aceleração de impressão. \\
+			M205 & Movimento & Define jerk e limites. \\
+			M206 & Movimento & Define offsets de home. \\
+			M207 & Retract & Configura retração. \\
+			M208 & Retract & Configura unretract. \\
+			M209 & Retract & Liga autoretract. \\
+			M218 & Configuração & Offset entre extrusores. \\
+			M220 & Controle & Ajusta feedrate (\%). \\
+			M221 & Controle & Ajusta fluxo (\%). \\
+			M226 & Controle & Pausa aguardando pino digital. \\
+			M300 & Beep & Emite som (S=freq, P=tempo). \\
+			M350 & Driver & Microstepping. \\
+			M351 & Driver & Interpolação de microstepping. \\
+			M355 & Controle & Luz LED on/off. \\
+			M380 / M381 & Solenoide & Liga/desliga solenoide. \\
+			M400 & Movimento & Aguarda todos os movimentos. \\
+			M401 / M402 & Servo & Abaixa/sobe servo probe. \\
+			M404 & Filamento & Define diâmetro nominal. \\
+			M405 & Sensor & Liga sensor de fluxo. \\
+			M406 & Sensor & Desliga sensor de fluxo. \\
+			M407 & Sensor & Reporta fluxo do filamento. \\
+			M410 & Emergência & Quickstop (parada rápida). \\
+			M420 & Nivelamento & Liga/desliga malha. \\
+			M421 & Nivelamento & Ajusta ponto da malha. \\
+			M428 & Configuração & Define offsets a partir da posição atual. \\
+			M500 & EEPROM & Salva configurações. \\
+			M501 & EEPROM & Carrega configurações. \\
+			M502 & EEPROM & Restaura padrões. \\
+			M503 & EEPROM & Mostra configurações atuais. \\
+			M524 & SD & Aborta impressão no SD. \\
+			M600 & Filamento & Troca de filamento. \\
+			M601 & Controle & Pausa programada. \\
+			M603 & Filamento & Configura mudança de filamento. \\
+			M851 & Probe & Define offset da sonda. \\
+			M900 & Extrusor & Linear Advance. \\
+			M906 & Driver & Corrente dos motores. \\
+			M907 & Driver & Corrente nominal. \\
+			M908 & Driver & Ajuste de DAC. \\
+			M909 / M910 & Driver & Configura/trava consumo. \\
+			M911 & Relatório & Status de energia (UPS). \\
+			M912 & Calibração & Ajuste de sensor interno. \\
+			M913 & Driver & Escala de corrente (\%). \\
+			M914 & Driver & Sensibilidade sensorless. \\
+			M916 / M917 / M918 & Driver & Configurações avançadas. \\
+			M928 & SD & Log serial para arquivo. \\
+			M999 & Sistema & Reinicia firmware após erro. \\
+			\hline
+			
+		\end{longtable}
+		
+
